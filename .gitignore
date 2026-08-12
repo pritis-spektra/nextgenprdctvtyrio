@@ -1,0 +1,9 @@
+# Word source files
+*.docx
+
+# macOS files
+.DS_Store
+
+# Temporary Office files
+~$*.docx
+
