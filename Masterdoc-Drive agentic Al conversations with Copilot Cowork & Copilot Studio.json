@@ -1,0 +1,46 @@
+[
+  {
+    "Name": "Drive agentic Al conversations with Copilot Cowork & Copilot Studio",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabsAI-Azure/Data-security",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/nextgenprdctvtyrio/refs/heads/main/Lab%201/Lab1.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/nextgenprdctvtyrio/refs/heads/main/Lab%202/Lab2.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/nextgenprdctvtyrio/refs/heads/main/Lab%203/Lab3.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/nextgenprdctvtyrio/refs/heads/main/Lab%204/Lab4.md",
+        "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/nextgenprdctvtyrio/refs/heads/main/Lab%205/Lab5.md",
+        "Order": 6
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/nextgenprdctvtyrio/refs/heads/main/Lab%206/Lab6.md",
+        "Order": 7
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/nextgenprdctvtyrio/refs/heads/main/Lab%207/Lab7.md",
+        "Order": 8
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/nextgenprdctvtyrio/refs/heads/main/Lab%208/Lab8.md",
+        "Order": 9
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/nextgenprdctvtyrio/refs/heads/main/Lab%209/Lab9.md",
+        "Order": 10
+      }
+
+    ]
+  }
+]
