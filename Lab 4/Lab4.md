@@ -78,6 +78,8 @@ intelligent and trustworthy.
 1. Wait until the **Your site is ready!** message appears, and then select **Go to site** to open the newly created SharePoint site.
 
     ![](media/media/de2s6.0.png)
+
+    ![](media/media/dye1t1s10.png)
     
 10. Download the following links and **upload** them in your SharePoint
     site:
