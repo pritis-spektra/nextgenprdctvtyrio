@@ -1,3 +1,4 @@
+
 # Lab 2 -- Microsoft 365 Copilot Chat: AI Powered Digital Coworker in Action
 
 Lab Duration: 30 minutes
@@ -67,40 +68,44 @@ a digital coworker that can:
 
 ## Exercise 1: The Intelligence Layer Kickstart 
 
-1.  Navigate to +++<https://m365.cloud.microsoft/chat/>+++ to
+1.  Navigate to <https://m365.cloud.microsoft/chat/> to
     open Microsoft 365 Copilot.
 
-2.  Sign in with your Microsoft 365 Copilot account credentials.
+2.  Sign in with 
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-> ![](media/media/image.png){width="4.75in"
-> height="3.7604166666666665in"}
+       ![](media/media/de1s1.png)
 
-3.  Enter the password and click **Yes**, to stay signed in.
+	- **Password:** <inject key="AzureAdUserPassword"></inject>
 
-> ![](media/media/image2.png){width="4.5in"
-> height="3.6354166666666665in"}
+        ![](media/media/de1s2.png)
+
+2. When prompted with the **Stay signed in?** dialog, select **No** to continue.
+
+    ![](media/media/de1s3.png)
 
 4.  After successful login, you will see **Copilot Chat** home page.
 
-![](media/media/image3.png){width="5.708333333333333in"
-height="3.3229166666666665in"}
+    ![](media/media/de1s4.png)
 
 5.  In Copilot Chat, paste the following prompt:
 
-+++Explain Work IQ in the context of ZAVA Retail QBR preparation.
+    ```
+    Explain Work IQ in the context of ZAVA Retail QBR preparation.
+    What is Microsoft IQ and how does it unify intelligence layers?
+    ```
 
-What is Microsoft IQ and how does it unify intelligence layers?+++
+    ![](media/media/de1s5.png)
 
-![](media/media/image4.png){width="6.5in" height="3.1041666666666665in"}
+6.  Verify the response:
 
-6.  Expected Outcome:
+    Work IQ → internal business data (sales, emails, meetings)
 
-Work IQ → internal business data (sales, emails, meetings)
+    Microsoft IQ → unified intelligence system across all layers
 
-Microsoft IQ → unified intelligence system across all layers
+    ![](media/media/de1s6.png)
 
-![](media/media/image5.png){width="6.5in" height="4.375in"}
-
+    ![](media/media/de1s7.png)
 ## Exercise 2: End-to-End QBR Story Builder
 
 ### Task 1: Create a SharePoint Site
@@ -109,40 +114,45 @@ In this exercise, you will create a Sharepoint site and upload the
 sample documents there which will be used later in this lab.
 
 1.  From a new browser, navigate to
-    +++<https://m365.cloud.microsoft/chat/+++>  and login with your lab
+    <https://m365.cloud.microsoft/chat/>  and login with your lab
     credentials.
 
 2.  Select **Apps** from the left pane and then
     select **SharePoint** once the Apps are loaded.
 
-![](media/media/image6.png){width="6.270833333333333in"
-height="3.1041666666666665in"}
+    ![](media/media/de2s2.png)
 
-3.  Select **+ Create site** from the SharePoint page.
+    ![](media/media/de2s2.0.png)
 
-![](media/media/image7.png "A screenshot of a browser AI-generated content may be incorrect."){width="6.270833333333333in"
-height="4.208333333333333in"}
+1. In SharePoint, select **Build (1)** from the left navigation pane, then under **Start building**, choose **Site (2)** to begin creating a new SharePoint site.
 
-4.  Select **Communication site** from the **Select the site
-    type** page.
+    ![](media/media/de2s3.png)
 
-![](media/media/image8.png "A screenshot of a web page AI-generated content may be incorrect."){width="6.270833333333333in"
-height="3.6875in"}
+4.  Select **Communication site (1)** from the Select the site template page, then select a **template (2)** to be used.
 
-5.  Select a **template** to be used.
+    ![](media/media/de2s4.png "A screenshot of a computer AI-generated content may be incorrect.")
 
-![](media/media/image9.png "A screenshot of a computer AI-generated content may be incorrect."){width="6.270833333333333in"
-height="3.4583333333333335in"}
+5. Select **Use template** to create the site using the displayed template.
 
-6.  Select **Use template**.
+    ![](media/media/de2s5.png "A screenshot of a website AI-generated content may be incorrect.")
 
-![](media/media/imagea.png "A screenshot of a website AI-generated content may be incorrect."){width="6.270833333333333in"
-height="3.5208333333333335in"}
+7. On the **Set up your site** page, enter **Zava Site** in the **Site name (1)** field, verify that the **Site address (2)** is available, and then select **Create site (3)** to create the SharePoint site.
 
-7.  Set up your site by pasting your site name as +++Zava Site+++.
-    Select Create Site.
+    ![](media/media/de2s6.png)
 
-![](media/media/imageb.png){width="6.5in" height="3.6875in"}
+    >**Note:** If you receive the message **"The site address is available with modification"**, update the **Site address** by adding the suffix **`2`** to the end of the site name (for example, `ZavaSite2`), and then continue with the site creation process.
+
+1. Wait until the **Your site is ready!** message appears, and then select **Go to site** to open the newly created SharePoint site.
+
+    ![](media/media/de2s6.0.png)
+
+1. In the **Documents (1)** library, select **Create or upload (2)** and then choose **Files upload (3)** to upload files to the SharePoint site.
+
+    ![](media/media/de2s7.png)
+
+1. Navigate to **`C:\Users\LabFiles\labfiles\lab 2 files`**, select all four files in the folder, and then choose **Open** to upload them to the SharePoint document library.
+
+    ![](media/media/de2s8.png)
 
 8.  Upload the following files in the Document center:
 
@@ -154,64 +164,65 @@ height="3.5208333333333335in"}
 
 - Leadership Distribution List
 
-![](media/media/imagec.png){width="6.5in" height="3.5520833333333335in"}
+    ![](media/media/de2s9.png)
 
 ### Task 2: Analyzing Excel sheet with Copilot
 
 1.  Open Zava QBR Sales Q2.xlsx from SharePoint.
 
-![](media/media/imaged.png){width="6.5in" height="3.5520833333333335in"}
+    ![](media/media/de2s10.png)
 
 2.  Open Copilot from lower right pane.
-    ![](media/media/imagee.png){width="6.25in"
-    height="3.4270833333333335in"}
+
+    ![](media/media/imagee.png)
 
 3.  The Copilot pane opens up. Paste the following prompt:\
-    \
-    +++Analyze regional revenue trends and highlight underperforming
-    stores.+++
+    ``Analyze regional revenue trends and highlight underperforming
+    stores.``
 
-![](media/media/imagef.png){width="6.5in" height="3.5520833333333335in"}
+    ![](media/media/de2s11.png)
 
-4.  Review the output:\
-    ![](media/media/image10.png){width="6.25in"
-    height="3.5556889763779527in"}
+4.  Review the output:
+
+    ![](media/media/de2s12.png)
 
 ### Task 3: Analyzing Word with Copilot
 
-1.  Open Zava QBR Template.docx from SharePoint.\
-    ![](media/media/image11.png){width="6.25in"
-    height="3.4154647856517935in"}
+1.  Open Zava QBR Template.docx from SharePoint.
 
-2.  Open Copilot from the lower right pane.\
-    ![](media/media/image12.png){width="6.25in"
-    height="3.3854166666666665in"}
+    ![](media/media/image11.png)
 
-3.  Paste the following prompt in the Copilot chat box:\
-    +++Convert analysis into an executive summary for leadership+++
+2.  Open Copilot from the lower right pane.
 
-![](media/media/image13.png){width="6.5in"
-height="2.8020833333333335in"}
+    ![](media/media/image12.png)
+
+3.  Paste the following prompt in the Copilot chat box:
+
+    ```Convert analysis into an executive summary for leadership```
+
+    ![](media/media/de2s13.png)
 
 4.  Review the output:\
-    ![](media/media/image14.png){width="6.25in" height="3.40625in"}
+    ![](media/media/image14.png)
+
+    > **Note:** If the executive summary is not automatically added to the Word document, select **Yes, add the summary to the document (1)** from the Copilot suggestions. If the suggestion is not visible, enter **"Yes, add the summary to the document" (2)** in the prompt box and select **Send (3)** to insert the generated summary into the document.
+    ![](media/media/de2s14.png)
 
 ### Task 4: Analyzing Presentation with Copilot
 
 1.  Open Zava QBR Presentation Template.pptx from SharePoint.
 
-![](media/media/image15.png){width="6.5in"
-height="3.5520833333333335in"}
+    ![](media/media/image15.png)
 
 2.  Open Copilot from lower right corner. The Copilot chat pane opens
     up.\
-    ![](media/media/image16.png){width="6.25in" height="3.53125in"}
+    ![](media/media/de2s15.png)
 
-3.  Paste the following prompt:\
-    +++Create a 5-slide QBR presentation based on the summary.+++
+3.  Paste the following prompt:
 
-![](media/media/image17.png){width="6.5in"
-height="3.6979166666666665in"}
+    ```Create a 5-slide QBR presentation based on the summary.```
+
+    ![](media/media/de2s16.png)
 
 4.  Expected Outcome
 
@@ -221,33 +232,38 @@ height="3.6979166666666665in"}
 
 - End-to-end executive deliverable generation
 
+    ![](media/media/de2s17.png)
+
+    ![](media/media/de2s18.png)
+
 ## Exercise 3: The Invisible Context Advantage 
 
-1.  Open Outlook from M365 apps section.
+1.  Navigate back to <https://m365.cloud.microsoft/chat/>
 
-![](media/media/image18.png){width="6.5in"
-height="1.7291666666666667in"}
+1. Select the **App launcher (1)** in the upper-left corner of the page, and then choose **Outlook (2)** to open Outlook in a new tab.
+
+    ![](media/media/de2s19.png)
 
 2.  Open Copilot from the upper right pane.
 
-![](media/media/image19.png){width="6.5in"
-height="3.6666666666666665in"}
+    ![](media/media/image19.png)
 
 3.  In Outlook Copilot Chat paste the following prompt:
 
-+++Summarize my priority emails related to QBR."
+    ```
+    Summarize my priority emails related to QBR." 
 
-"What meetings should I prepare for this week?+++
-![](media/media/image1a.png){width="6.5in"
-height="3.5416666666666665in"}
+    "What meetings should I prepare for this week?
+    ```
+    ![](media/media/de2s20.png)
 
 4.  Expected Outcome
 
-Copilot automatically uses emails, calendar, and priorities
+    Copilot automatically uses emails, calendar, and priorities
 
-No manual selection of context required
+    No manual selection of context required
 
-![](media/media/image1b.png){width="6.5in" height="3.53125in"}
+    ![](media/media/image1b.png)
 
 ## Key Takeaways
 

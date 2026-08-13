@@ -33,49 +33,52 @@ intelligent and trustworthy.
 
 ## Task 1: Access the Agent Creation Tool 
 
-1.  Navigate to +++<https://m365.cloud.microsoft/chat/>+++ to
-    open Microsoft 365 Copilot.
+1.  From a new browser, navigate to
+    <https://m365.cloud.microsoft/chat/> 
+     
+ 2.  Sign in with 
 
-2.  Sign in with your Microsoft 365 Copilot account credentials.\
-    ![](media/media/image41.png){width="4.75in"
-    height="3.7604166666666665in"}
+        - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-3.  Enter the password and click **Yes**, to stay signed in.\
-    ![](media/media/image42.png){width="4.5in"
-    height="3.6354166666666665in"}
+            ![](media/media/de1s1.png)
 
-4.  Select **Apps** from the left pane and then
+        - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+            ![](media/media/de1s2.png)
+
+2. When prompted with the **Stay signed in?** dialog, select **No** to continue.
+
+    ![](media/media/de1s3.png)
+
+2.  Select **Apps** from the left pane and then
     select **SharePoint** once the Apps are loaded.
 
-![](media/media/image43.png){width="6.270833333333333in"
-height="3.1041666666666665in"}
+    ![](media/media/de2s2.png)
 
-5.  Select **+ Create site** from the SharePoint page.
+    ![](media/media/de2s2.0.png)
 
-![](media/media/image44.png "A screenshot of a browser AI-generated content may be incorrect."){width="6.270833333333333in"
-height="4.208333333333333in"}
+1. In SharePoint, select **Build (1)** from the left navigation pane, then under **Start building**, choose **Site (2)** to begin creating a new SharePoint site.
 
-6.  Select **Communication site** from the **Select the site
-    type** page.
+    ![](media/media/de2s3.png)
 
-![](media/media/image45.png "A screenshot of a web page AI-generated content may be incorrect."){width="6.270833333333333in"
-height="3.6875in"}
+4.  Select **Communication site (1)** from the Select the site template page, then select a **template (2)** to be used.
 
-7.  Select a **template** to be used.
+    ![](media/media/de2s4.png "A screenshot of a computer AI-generated content may be incorrect.")
 
-![](media/media/image46.png "A screenshot of a computer AI-generated content may be incorrect."){width="6.270833333333333in"
-height="3.4583333333333335in"}
+5. Select **Use template** to create the site using the displayed template.
 
-8.  Select **Use template**.
+    ![](media/media/de2s5.png "A screenshot of a website AI-generated content may be incorrect.")
 
-![](media/media/image47.png "A screenshot of a website AI-generated content may be incorrect."){width="6.270833333333333in"
-height="3.5208333333333335in"}
+7. On the **Set up your site** page, enter **Zava Site** in the **Site name (1)** field, verify that the **Site address (2)** is available, and then select **Create site (3)** to create the SharePoint site.
 
-9.  Set up your site by pasting your site name as +++Zava Site+++.
-    Select Create Site.
+    ![](media/media/de2s6.png)
 
-![](media/media/image48.png){width="6.5in" height="3.6875in"}
+    >**Note:** If you receive the message **"The site address is available with modification"**, update the **Site address** by adding the suffix **`2 or 3`** to the end of the site name (for example, `ZavaSite2`), and then continue with the site creation process.
 
+1. Wait until the **Your site is ready!** message appears, and then select **Go to site** to open the newly created SharePoint site.
+
+    ![](media/media/de2s6.0.png)
+    
 10. Download the following links and **upload** them in your SharePoint
     site:
 
