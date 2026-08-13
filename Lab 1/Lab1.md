@@ -1,16 +1,10 @@
 # Build an Autonomous Multi-Agent Email Operations Assistant Using Microsoft 365 Copilot Workflows Agent (Frontier) and Work IQ
 
-Duration: 30 minutes
+### Duration: 30 Minutes
 
-# **Scenario** 
+## Scenario
 
-Zava Retail, a rapidly growing omnichannel retailer, faced increasing
-operational complexity due to high volumes of communication across
-customers, suppliers, and internal teams. With expansion across
-e-commerce platform, 50+ physical stores, vendor and supplier ecosystem,
-customer support and marketing teams, email became the primary but
-inefficient channel for critical business interactions. Zava Retail
-teams receive hundreds of emails daily from:
+Zava Retail, a rapidly growing omnichannel retailer, faced increasing operational complexity due to high volumes of communication across customers, suppliers, and internal teams. With expansion across e-commerce platform, 50+ physical stores, vendor and supplier ecosystem, customer support and marketing teams, email became the primary but inefficient channel for critical business interactions. Zava Retail teams receive hundreds of emails daily from:
 
 - Customers (complaints, returns, inquiries)
 
@@ -28,33 +22,23 @@ This results in:
 
 - Lack of visibility into priorities
 
-To address this challenge, Zava Retail is looking to implement an
-AI-powered Intelligent Workflow Agent using Microsoft 365 Copilot to
-automate email triage, highlight urgent and actionable items, deliver
-insights to workload and productivity, and provide real-time
-productivity insights.
+To address this challenge, Zava Retail is looking to implement an AI-powered Intelligent Workflow Agent using Microsoft 365 Copilot to automate email triage, highlight urgent and actionable items, deliver insights to workload and productivity, and provide real-time productivity insights.
 
 **Key Personas**
 
-1.  **Marie Brown -- Customer Support Manager**
+1. **Marie Brown -- Customer Support Manager**
 
-The customer support manager at Zava Retail manages the customer support
-inbox, handles escalations and SLA (Service-level agreement) compliance,
-and coordinates with logistics and SLA compliance.
+The customer support manager at Zava Retail manages the customer support inbox, handles escalations and SLA (Service-level agreement) compliance, and coordinates with logistics and SLA compliance.
 
-2.  **David Turner -- Supply Chain Coordinator**
+2. **David Turner -- Supply Chain Coordinator**
 
-The supply chain coordinator at Zava Retail tracks vendor
-communications, manages inventory updates and delays, and coordinates
-with warehouses.
+The supply chain coordinator at Zava Retail tracks vendor communications, manages inventory updates and delays, and coordinates with warehouses.
 
-3.  **Patricia Gray -- Operations Head**
+3. **Patricia Gray -- Operations Head**
 
-The operations head at Zava Retail oversees the business operations
-across departments, tracks productivity and workload, and ensures
-operational efficiency.
+The operations head at Zava Retail oversees the business operations across departments, tracks productivity and workload, and ensures operational efficiency.
 
-# Lab Prerequisites
+## Lab Prerequisites
 
 **Licensing & Access**
 
@@ -70,21 +54,19 @@ operational efficiency.
 
 - Permission to access:
 
-  - Microsoft Graph / Insights data
+    - Microsoft Graph / Insights data
 
 **DLP & Connector Requirements (Admin setup)**
 
-Your organization's DLP policy must allow:
+Your organization's DLP policy must allow:
 
-- AI actions (Power Platform connector)
+- AI actions (Power Platform connector)
 
 - Dataverse (AI prompt)
 
 - Power Platform
 
 - Microsoft 365 connectors:
-
-<!-- -->
 
 - Outlook
 
@@ -96,122 +78,106 @@ Your organization's DLP policy must allow:
 
 - Approvals
 
-These are required to ensure that workflows can read emails, post to
-Teams, and summarize content.
+These are required to ensure that workflows can read emails, post to Teams, and summarize content.
 
 ## Exercise 1: Build the Email Triage Agent
 
-Goal: Create the first operational agent that reviews unread emails and
-prioritizes work.
+Goal: Create the first operational agent that reviews unread emails and prioritizes work.
 
-1.  Navigate to +++<https://m365.cloud.microsoft/chat/>+++ to
-    open Microsoft 365 Copilot.
+1. Navigate to **<https://m365.cloud.microsoft/chat/>** to open Microsoft 365 Copilot.
 
-2.  Sign in with your Microsoft 365 Copilot account credentials.
+2. Sign in with your Microsoft 365 Copilot account credentials.
 
-![](media/media/image1d.png){width="4.75in"
-height="3.7604166666666665in"}
+   ![](media/media/image1d.png)
 
-3.  Enter the password and click **Yes**, to stay signed in.
+3. Enter the password and click **Yes**, to stay signed in.
 
-![](media/media/image1e.png){width="4.500991907261592in"
-height="3.6354166666666665in"}
+   ![](media/media/image1e.png)
 
-4.  After successful login, you will see **Copilot Chat** home page.
+4. After successful login, you will see **Copilot Chat** home page.
 
-![](media/media/image4.png){width="5.717708880139982in"
-height="3.32424978127734in"}
+   ![](media/media/image4.png)
 
-5.  In the **left navigation**, select **All Agents** and explore the
+5. In the **left navigation**, select **All Agents** and explore the
     Agent store.
 
-![](media/media/image5.png){width="6.270833333333333in"
-height="3.7916666666666665in"}
+   ![](media/media/image5.png)
 
-6.  Scroll down and look for **Workflows (Frontier)** option under
+6. Scroll down and look for **Workflows (Frontier)** option under
     "Built by Microsoft" header.
 
-![](media/media/image6.png){width="6.270833333333333in"
-height="3.6458333333333335in"}
+   ![](media/media/image6.png)
 
-7.  Select **Add** to add the **Workflows Agent (Frontier)**.
+7. Select **Add** to add the **Workflows Agent (Frontier)**.
 
-![](media/media/image7.png){width="6.270833333333333in"
-height="3.6041666666666665in"}
+   ![](media/media/image7.png)
 
-## **Exercise 2: Build Zava Email Triage Agent**
+## Exercise 2: Build Zava Email Triage Agent
 
 ### Task 1: Open Workflows Agent
 
-1.  Go to Microsoft 365 Copilot home page.
+1. Go to Microsoft 365 Copilot home page.
 
-2.  Navigate to **Agents \> Workflows (Frontier)**.
+2. Navigate to **Agents > Workflows (Frontier)**.
 
-![](media/media/imageb.png){width="6.270833333333333in"
-height="3.625in"}
+   ![](media/media/imageb.png)
 
-**\> Note:** You will see a chat interface of Workflows (Frontier).
+   >**Note:** You will see a chat interface of Workflows (Frontier).
 
-![](media/media/imagec.png){width="6.270833333333333in"
-height="3.6458333333333335in"}
+   ![](media/media/imagec.png)
 
 ### Task 2: Describe the Workflow in Natural Language
 
-1.  Define Business Logic (Prompt)
+1. Define Business Logic (Prompt)Paste the below prompt and click **Send**.
 
-Paste the below prompt and click **Send**.
+    ```
+    Each weekday morning, review unread emails from the last 24 hours.
+    Focus on:
+    - Customer complaints and escalations
+    - Supplier/vendor updates
+    - Internal approvals or urgent requests
 
-*+++Each weekday morning, review unread emails from the last 24 hours.*\
-*Focus on:*\
-*- Customer complaints and escalations*\
-*- Supplier/vendor updates*\
-*- Internal approvals or urgent requests*
+    Categorize each email into:
+    - Urgent -- Needs immediate action
+    - Action Required -- Needs response
+    - FYI -- Informational
 
-*Categorize emails into:*
+    For each email, extract:
+    - Sender
+    - Subject
+    - A one-line Summary
+    - Any deadlines
+    - Suggested next steps
 
-- *Urgent -- Needs immediate action*
+    Highlight:
+    - Customer complaints impacting SLA
+    - Supplier delays affecting inventory
 
-- *Action Required -- Needs response*
+    Limit the summary to the 15 most relevant emails if more are found.
 
-- *FYI -- Informational*
+    Send the structured summary to myself on Microsoft Teams email id --
+    <inject key="AzureAdUserEmail"></inject>. Use simple section headers (Urgent, Action Required,
+    FYI, Highlights) followed by a flat bullet list under each - no tables, no nested
+    sub-bullets. Keep the entire message under 2000 characters. If the summary is
+    longer than that, shorten each email's summary line rather than omitting emails.
+    ```
 
-*For each email include:*\
-*- Sender*\
-*- Subject*\
-*- Summary*\
-*- Any deadlines*\
-*- Suggested next steps*\
-\
-*Highlight:*\
-*- Customer complaints impacting SLA*\
-*- Supplier delays affecting inventory*\
-\
-*Send the structured summary to myself on Microsoft Teams email id --
-<odl_user_2342438@gpssandboxlabs100239.onmicrosoft.com>*
-
-**\> Note:** The email id will be changed to the username you are
+    >**Note:** The email id will be changed to the username you are
 currently using to execute this lab.
 
-![](media/media/imaged.png){width="6.270833333333333in"
-height="3.8333333333333335in"}
+   ![](media/media/imaged.png)
 
-2.  Select **Save** on the top right corner of the **Workflow** window
-    to run the actions automatically. Your workflow is now created and
-    ready to test.
+2. Select **Save** on the top right corner of the **Workflow** window to run the actions automatically. Your workflow is now created and ready to test.
 
-![](media/media/image1f.png){width="6.25in"
-height="3.6458333333333335in"}
+   ![](media/media/image1f.png)
 
-3.  Once the workflow is saved, select **Test** to review the output.
+3. Once the workflow is saved, select **Test** to review the output.
 
-![](media/media/image20.png){width="6.5in"
-height="3.7916666666666665in"}
+   ![](media/media/image20.png)
 
-4.  Once the testing is successful, it will show the test duration and
-    result as success confirmation.
+4. Once the testing is successful, it will show the test duration and result as success confirmation.
 
-![](media/media/image21.png){width="6.5in"
-height="3.6666666666666665in"}
+   ![](media/media/image21.png)
 
 Once the test process is completed, review that it:
 
@@ -219,175 +185,164 @@ Once the test process is completed, review that it:
 
 - Connects to:
 
-  - Outlook (email ingestion)
+    - Outlook (email ingestion)
 
-  - Dataverse AI (reasoning)
+    - Dataverse AI (reasoning)
 
-  - Teams (output delivery)
-
-<!-- -->
+    - Teams (output delivery)
 
 - Applies AI reasoning for categorization and summarization.
 
-You did not configure connectors manually---Copilot did it.
+You did not configure connectors manually, Copilot did it for you.
 
-**\> Note:** Test process can take 5-10 minutes. Wait until the process
+>**Note:** Test process can take 5-10 minutes. Wait until the process
 is completed.
 
 ### Task 3: Validate Output 
 
 After processing your prompt, you will see the run results:
 
-1\. Emails detected.
+1. Emails detected.
 
-**\> Note:** You need to send different types of sample emails to the
-account to verify that the workflow triggers a notification in Microsoft
-Teams. If you do not have any new unread emails in your inbox, you will
-need to do send test emails to validate the workflow and outputs.
+   >**Note:** You need to send different types of sample emails to the
+account to verify that the workflow triggers a notification in Microsoft Teams. If you do not have any new unread emails in your inbox, you will need to do send test emails to validate the workflow and outputs.
 
-3.  Email categorization accuracy.
+3. Email categorization accuracy.
 
-4.  Teams message format.
-
-Ensure that the Teams message format is matching the Outlook email
+4. Ensure that the Teams message format is matching the Outlook email
 details.
 
-![](media/media/image11.png){width="6.270833333333333in"
-height="2.7708333333333335in"}
+   ![](media/media/image11.png)
 
-![](media/media/image12.png){width="6.270833333333333in"
-height="2.6875in"}
+   ![](media/media/image12.png)
 
-5.  If something looks wrong:
+5. If something looks wrong:
 
-- Update the prompt
+    - Update the prompt
 
-- Re-test
+    - Re-test
 
-6.  Check for the following test results for Zava Retail.
+6. Check for the following test results for Zava Retail.
 
-- Are customer complaints in urgent?
+    - Are customer complaints in urgent?
 
-- Are supplier delays highlighted?
+    - Are supplier delays highlighted?
 
-- Are summaries actionable?
+    - Are summaries actionable?
 
-- Is Teams message structured clearly?
+    - Is Teams message structured clearly?
 
 ## **Exercise 3: Add Human-in-the-Loop**
 
 Marie Brown (Customer Support Manager) wants approval before sending
 summaries to leadership team.
 
-1.  Navigate to +++<https://m365.cloud.microsoft/chat/>+++ to
-    open Microsoft 365 Copilot.
+1. Navigate to **<https://m365.cloud.microsoft/chat/>** to
+    open Microsoft 365 Copilot.
 
-2.  Go to **Workflows (Frontier)** agent.
+2. Go to **Workflows (Frontier)** agent.
 
-3.  Paste the below prompt in the chat and select **Save**.
+3. Paste the below prompt in the chat and select **Save**.
 
-*+++When a summary is generated from Outlook emails categorized as
-Action Required:*
+    ```
+    When a summary is generated from Outlook emails categorized as
+    Action Required:
 
-*Before sending the summary:*
+    Before sending the summary:
 
-*Send a Microsoft Teams approval request to me including the summary
-content.*
+    Send a Microsoft Teams approval request to me including the summary
+    content.
 
-*If approved:*
+    If approved:
 
-*Send the summary via email.*
+    Send the summary via email.
 
-*If rejected:*
+    If rejected:
 
-*Stop the workflow and notify me in Teams.*
+    Stop the workflow and notify me in Teams.
 
-*Start the workflow when a new email arrives. Once the approval or
-rejection action is taken, stop sending the approval emails to the
-user.+++*
+    Start the workflow when a new email arrives. Once the approval or
+    rejection action is taken, stop sending the approval emails to the
+    user.
+    ```
 
-![](media/media/image22.png){width="6.5in" height="4.9375in"}
+   ![](media/media/image22.png)
 
-4.  Once the workflow is saved, select **Test**.
+4. Once the workflow is saved, select **Test**.
 
-![](media/media/image23.png){width="6.5in"
-height="3.7916666666666665in"}
+   ![](media/media/image23.png)
 
-![](media/media/image24.png){width="6.5in"
-height="3.7916666666666665in"}
+   ![](media/media/image24.png)
 
-5.  Review the output of approval prompt.
+5. Review the output of approval prompt.
 
 - Approval step added
 
 - Control retained for critical communication
 
-6.  The approval step will be added and the email will be received with
+6. The approval step will be added and the email will be received with
     "Approve" and "Reject" options. Select **Approve** and enter
     "*Approved"* in the comments. Select **Submit**.
 
-7.  
+7. 
 
-![](media/media/image25.png){width="6.5in"
-height="3.2083333333333335in"}
+   ![](media/media/image25.png)
 
-8.  Once the approval is received, review the confirmation email.
+8. Once the approval is received, review the confirmation email.
 
-![](media/media/image18.png){width="6.270833333333333in"
-height="3.9375in"}
+   ![](media/media/image18.png)
 
 ## **Exercise 4: Autonomous Workflow**
 
 Marie Brown (Customer Support Manager) wants to reduce missed
 follow-ups.
 
-1.  Navigate to +++<https://m365.cloud.microsoft/chat/>+++ to
-    open Microsoft 365 Copilot.
+1. Navigate to **<https://m365.cloud.microsoft/chat/>** to
+    open Microsoft 365 Copilot.
 
-2.  Go to **Workflows (Frontier)** agent.
+2. Go to **Workflows (Frontier)** agent.
 
-3.  Paste the below prompt in the chat and select **Save**.
+3. Paste the below prompt in the chat and select **Save**.
 
-*+++When a new email arrives in Outlook with \"Urgent\" in the email
-subject:*\
+***When a new email arrives in Outlook with "Urgent" in the email
+subject:*
 *Send a Microsoft Teams reminder with Urgent timeline to respond to the
-email.*\
-*If there is no email response until 5 minutes:*\
+email.*
+*If there is no email response until 5 minutes:*
 *Send an escalation notification on email and Microsoft Teams."*
 
-*"When a new email arrives in Outlook with \"Urgent\" in the email
-subject:*\
+*"When a new email arrives in Outlook with "Urgent" in the email
+subject:*
 *Send a Microsoft Teams reminder to
 "<User1-60891280@lodsprodmca.onmicrosoft.com>" to respond to the email
-instantly.*\
-*If the email is still not responded in 2 hours:*\
-*Send an escalation notification to Microsoft Teams.+++*
+instantly.*
+*If the email is still not responded in 2 hours:*
+*Send an escalation notification to Microsoft Teams.***
 
-**\> Note:** The email id will be changed to the username (Email ID) you
-are currently using to execute this lab.\
-![](media/media/image26.png){width="6.5in" height="4.3125in"}
+>**Note:** The email id will be changed to the username (Email ID) you
+are currently using to execute this lab.
 
-4.  Once the workflow is saved, select **Test**.
+   ![](media/media/image26.png)
 
-![](media/media/image27.png){width="6.5in"
-height="3.7916666666666665in"}
+4. Once the workflow is saved, select **Test**.
 
-5.  Review the outcome:
+   ![](media/media/image27.png)
+
+5. Review the outcome:
 
 - Automated follow-ups
 
 - Escalation logic activated
 
-6.  Review the automated follow-up message sent on Teams. It ensures
+6. Review the automated follow-up message sent on Teams. It ensures
     that the urgent emails are not missed.
 
-![](media/media/image1c.png){width="6.270833333333333in"
-height="2.625in"}
+   ![](media/media/image1c.png)
 
-7.  Once the mentioned time of 2 hours is passed, review the automated
+7. Once the mentioned time of 2 hours is passed, review the automated
     escalation message on Teams.
 
-> **\> Note:** Currently, the last step of the workflow cannot be
+> >**Note:** Currently, the last step of the workflow cannot be
 > executed. The flow will send the Teams message after the 2-hour mark
 > is reached.
 
