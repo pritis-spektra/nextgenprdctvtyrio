@@ -86,13 +86,17 @@ Goal: Create the first operational agent that reviews unread emails and prioriti
 
 1. Navigate to **<https://m365.cloud.microsoft/chat/>** to open Microsoft 365 Copilot.
 
-2. Sign in with your Microsoft 365 Copilot account credentials.
+2. Sign in o Microsoft 365 Copilot account using the following **credentials (1)** and select **Next (2)**:
 
-   ![](media/media/image1d.png)
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-3. Enter the password and click **Yes**, to stay signed in.
+     ![](media/media/image1d.png)
 
-   ![](media/media/image1e.png)
+3. Next, provide your **password (1)** and select **Sign In (2)**:
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+     ![](media/media/image1e.png)
 
 4. After successful login, you will see **Copilot Chat** home page.
 
@@ -237,8 +241,7 @@ details.
 Marie Brown (Customer Support Manager) wants approval before sending
 summaries to leadership team.
 
-1. Navigate to **<https://m365.cloud.microsoft/chat/>** to
-    open Microsoft 365 Copilot.
+1. Navigate to **<https://m365.cloud.microsoft/chat/>** to open Microsoft 365 Copilot.
 
 2. Go to **Workflows (Frontier)** agent.
 
@@ -266,7 +269,7 @@ summaries to leadership team.
     user.
     ```
 
-   ![](media/media/image22.png)
+    ![](media/media/image22.png)
 
 4. Once the workflow is saved, select **Test**.
 
@@ -276,19 +279,15 @@ summaries to leadership team.
 
 5. Review the output of approval prompt.
 
-- Approval step added
+    - Approval step added
 
-- Control retained for critical communication
+    - Control retained for critical communication
 
-6. The approval step will be added and the email will be received with
-    "Approve" and "Reject" options. Select **Approve** and enter
-    "*Approved"* in the comments. Select **Submit**.
-
-7. 
+6. The approval step will be added and the email will be received with "Approve" and "Reject" options. Select **Approve** and enter "*Approved"* in the comments. Select **Submit**.
 
    ![](media/media/image25.png)
 
-8. Once the approval is received, review the confirmation email.
+7. Once the approval is received, review the confirmation email.
 
    ![](media/media/image18.png)
 
@@ -297,32 +296,32 @@ summaries to leadership team.
 Marie Brown (Customer Support Manager) wants to reduce missed
 follow-ups.
 
-1. Navigate to **<https://m365.cloud.microsoft/chat/>** to
-    open Microsoft 365 Copilot.
+1. Navigate to **<https://m365.cloud.microsoft/chat/>** to open Microsoft 365 Copilot.
 
 2. Go to **Workflows (Frontier)** agent.
 
 3. Paste the below prompt in the chat and select **Save**.
 
-***When a new email arrives in Outlook with "Urgent" in the email
-subject:*
-*Send a Microsoft Teams reminder with Urgent timeline to respond to the
-email.*
-*If there is no email response until 5 minutes:*
-*Send an escalation notification on email and Microsoft Teams."*
+    ```
+    When a new email arrives in Outlook with "Urgent" in the email
+    subject:
+    Send a Microsoft Teams reminder with Urgent timeline to respond to the
+    email.
+    If there is no email response until 5 minutes:
+    Send an escalation notification on email and Microsoft Teams."
 
-*"When a new email arrives in Outlook with "Urgent" in the email
-subject:*
-*Send a Microsoft Teams reminder to
-"<User1-60891280@lodsprodmca.onmicrosoft.com>" to respond to the email
-instantly.*
-*If the email is still not responded in 2 hours:*
-*Send an escalation notification to Microsoft Teams.***
+    "When a new email arrives in Outlook with "Urgent" in the email
+    subject:
+    Send a Microsoft Teams reminder to
+    "<inject key="AzureAdUserEmail"></inject>" to respond to the email
+    instantly.
+    If the email is still not responded in 2 hours:
+    *Send an escalation notification to Microsoft Teams.
+    ```
 
->**Note:** The email id will be changed to the username (Email ID) you
-are currently using to execute this lab.
+    >**Note:** The email id will be changed to the username (Email ID) you are currently using to execute this lab.
 
-   ![](media/media/image26.png)
+     ![](media/media/image26.png)
 
 4. Once the workflow is saved, select **Test**.
 
@@ -330,23 +329,19 @@ are currently using to execute this lab.
 
 5. Review the outcome:
 
-- Automated follow-ups
+    - Automated follow-ups
 
-- Escalation logic activated
+    - Escalation logic activated
 
-6. Review the automated follow-up message sent on Teams. It ensures
-    that the urgent emails are not missed.
+6. Review the automated follow-up message sent on Teams. It ensures that the urgent emails are not missed.
 
    ![](media/media/image1c.png)
 
-7. Once the mentioned time of 2 hours is passed, review the automated
-    escalation message on Teams.
+7. Once the mentioned time of 2 hours is passed, review the automated escalation message on Teams.
 
-> >**Note:** Currently, the last step of the workflow cannot be
-> executed. The flow will send the Teams message after the 2-hour mark
-> is reached.
+    >**Note:** Currently, the last step of the workflow cannot be executed. The flow will send the Teams message after the 2-hour mark is reached.
 
-## **Lab Summary**
+## Lab Summary
 
 In this lab, you learned how the Workflows Agent in Microsoft 365
 Copilot enables a shift from static automation to AI-powered, adaptive
