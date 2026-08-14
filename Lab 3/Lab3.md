@@ -1,3 +1,4 @@
+
 # Lab 3 -- Copilot Cowork: Intelligent File Organizer
 
 Estimated Time -30 minutes
@@ -65,7 +66,7 @@ Complete the following setup steps before starting the lab (estimated:
 
 - Lab Files / Retail --- upload provided retail document samples
 
-- Lab Files / Shared Files --- configure \'Anyone with the link\'
+- Lab Files / Shared Files --- configure 'Anyone with the link'
   sharing on at least 3 files
 
 - Lab Files / Archive Candidates --- optional pre-populated stale
@@ -82,45 +83,56 @@ Complete the following setup steps before starting the lab (estimated:
 Task 1: Create the SharePoint site
 
 1.  From a new browser, navigate to
-    +++<https://m365.cloud.microsoft/chat/+++>  and login with your lab
-    credentials.![](media/media/image.png){width="4.75in"
-    height="3.7604166666666665in"}
+    <https://m365.cloud.microsoft/chat/> 
+     
+ 2.  Sign in with 
 
-2.  Enter the password and click **Yes**, to stay signed in.
+        - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-![](media/media/image2.png){width="4.5in" height="3.6354166666666665in"}
+            ![](media/media/de1s1.png)
 
-3.  Select **Apps** from the left pane and then
+        - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+            ![](media/media/de1s2.png)
+
+2. When prompted with the **Stay signed in?** dialog, select **No** to continue.
+
+    ![](media/media/de1s3.png)
+
+2.  Select **Apps** from the left pane and then
     select **SharePoint** once the Apps are loaded.
 
-![](media/media/image3.png){width="6.270833333333333in"
-height="3.1041666666666665in"}
+    ![](media/media/de2s2.png)
 
-4.  Select **+ Create site** from the SharePoint page.
+    ![](media/media/de2s2.0.png)
 
-![](media/media/image4.png "A screenshot of a browser AI-generated content may be incorrect."){width="6.270833333333333in"
-height="4.208333333333333in"}
+1. In SharePoint, select **Build (1)** from the left navigation pane, then under **Start building**, choose **Site (2)** to begin creating a new SharePoint site.
 
-5.  Select **Communication site** from the **Select the site
-    type** page.
+    ![](media/media/de2s3.png)
 
-![](media/media/image5.png "A screenshot of a web page AI-generated content may be incorrect."){width="6.270833333333333in"
-height="3.6875in"}
+4.  Select **Communication site (1)** from the Select the site template page, then select a **template (2)** to be used.
 
-6.  Select a **template** to be used.
+    ![](media/media/de2s4.png "A screenshot of a computer AI-generated content may be incorrect.")
 
-![](media/media/image6.png "A screenshot of a computer AI-generated content may be incorrect."){width="6.270833333333333in"
-height="3.4583333333333335in"}
+5. Select **Use template** to create the site using the displayed template.
 
-7.  Select **Use template**.
+    ![](media/media/de2s5.png "A screenshot of a website AI-generated content may be incorrect.")
 
-![](media/media/image7.png "A screenshot of a website AI-generated content may be incorrect."){width="6.270833333333333in"
-height="3.5208333333333335in"}
+7. On the **Set up your site** page, enter **Zava Site** in the **Site name (1)** field, verify that the **Site address (2)** is available, and then select **Create site (3)** to create the SharePoint site.
 
-8.  Set up your site by pasting your site name as +++Zava Site+++.
-    Select Create Site.
+    ![](media/media/de2s6.png)
 
-![](media/media/image8.png){width="6.5in" height="3.6875in"}
+    >**Note:** If you receive the message **"The site address is available with modification"**, update the **Site address** by adding the suffix **`2 or 3`** to the end of the site name (for example, `ZavaSite2`), and then continue with the site creation process.
+
+1. Wait until the **Your site is ready!** message appears, and then select **Go to site** to open the newly created SharePoint site.
+
+    ![](media/media/de2s6.0.png)
+
+1. In the **Documents (1)** library, select **Create or upload (2)** and then choose **Folder upload (3)** to upload files to the SharePoint site.
+
+    ![](media/media/dze1s10.png)
+
+1. Navigate to **`C:\Users\LabFiles\labfiles\lab 3 files\files (10)`**
 
 9.  Upload the following files in the Document center:
 
@@ -132,61 +144,66 @@ height="3.5208333333333335in"}
 
 - Shared files folder
 
-![](media/media/image9.png){width="6.5in" height="2.9479166666666665in"}
+    ![](media/media/dze1s11.png)
+
+    ![](media/media/dze1s12.png)
+    >**Note:** Select each folder individually from the list, starting with **Archive Candidates**, then **HR**, **Retail**, and **Shared Files**, and choose **Upload (2)** after selecting each folder to upload them one at a time.
 
 Task 2: File Classification and renaming
 
-1.  Open your browser and navigate to +++m365.cloud.microsoft+++. Sign
-    in with your lab account.
+1.  Open your browser and navigate to ```m365.cloud.microsoft```.
 
-2.  After successful login, you will see **Copilot Chat** home page.
-    Select the Microsoft 365 Copilot app from the launcher. Click the
-    \'Cowork\' tab at the top of the left sidebar --- NOT the \'Chat\'
-    tab.
+1. In Microsoft Copilot, select the **Cowork** tab from the left navigation pane to access the Copilot Cowork experience.
 
-![](media/media/imagea.png){width="6.5in" height="2.34375in"}
+    ![](media/media/dze1t2s2.png)
 
 3.  In the Cowork chat box, paste the following classification prompt,
     and select, then click the blue ↑ send arrow on the right side of
     the box:
 
-*+++* *Analyze the files in the \"Documents\" library on the Zava
-SharePoint site. Classify each by type and topic, then propose a
-renaming scheme of the form YYYY-MM-DD\_\<Topic\>\_\<DocType\> based on
-each file\'s content and metadata. Show me the full old-name → new-name
-mapping before renaming* *anything.+++*
+    ```
+    Analyze the files in the "Documents" library on the Zava
+    SharePoint site. Classify each by type and topic, then propose a
+    renaming scheme of the form YYYY-MM-DD\_<Topic>\_<DocType> based on
+    each file's content and metadata. Show me the full old-name → new-name
+    mapping before renaming anything.
+    ```
 
-![](media/media/imageb.png){width="6.5in"
-height="3.0104166666666665in"}*4.* After content analysis, Cowork
+    ![](media/media/dze1t2s3.png)
+    
+4. After content analysis, Cowork
 produces the full old-name → new-name mapping table and stops --- it
 will not rename anything until you approve.
 
-![](media/media/imagec.png){width="6.5in" height="3.7083333333333335in"}
+    ![](media/media/dze1t2s4.png)
 
-IMPORTANT: The message input box has returned to \'Message Cowork\' ---
-Cowork has STOPPED. NO changes have been made in OneDrive yet. This is
-the Human-in-the-Loop preview gate.
+    >**IMPORTANT:** The message input box has returned to 'Message Cowork' ---
+    Cowork has STOPPED. NO changes have been made in OneDrive yet. This is
+    the Human-in-the-Loop preview gate.
 
-### Task 2: Creating a new folder
+Task 3: Creating a new folder
 
 1.  In the message box, paste the following prompt and select execute
     button:\
-    *+++Proceed with suggesting renaming and create new folder for all
-    latest renamed files+++*
+    ```
+    Proceed with suggesting renaming and create new folder for all latest renamed files.
+    ```
 
-![](media/media/imaged.png){width="6.5in" height="3.6979166666666665in"}
+    ![](media/media/dze1t2s5.png)
 
-2.  Cowork would ask you to edit the name. Once done, select +Create.\
-    ![](media/media/imagee.png){width="6.25in"
-    height="3.5416666666666665in"}
+2. When Copilot prompts to create the **Renamed - Current Files** folder, select **Create** to approve the action and continue the workflow.
+
+    ![](media/media/dze1t2s6.png)
 
 3.  Cowork would ask you to approve the names for all the files. Click
     Approve All.
 
-![](media/media/imagef.png){width="6.5in" height="4.46875in"}
+    ![](media/media/dze1t2s7.png)
+
+    ![](media/media/dze1t2s8.png)
 
 4.  Review the output:\
-    ![](media/media/image10.png){width="6.25in" height="4.3125in"}
+    ![](media/media/dze1t2s9.png)
 
 ## Exercise 2 -- OneDrive and SharePoint governance audit
 
@@ -199,69 +216,66 @@ governance action.
 
 1.  In the Cowork chat box, paste the following prompt:
 
-*+++Audit my \'Lab Files\' folder for governance issues: duplicate
-files, files not modified in over 6 months, files shared externally or
-with \'anyone\' links, and files with no clear owner or topic. Recommend
-an action per finding (archive, delete, restrict sharing) but take no
-action* *yet.+++*
+    ```
+    Audit my 'Lab Files' folder for governance issues: duplicate
+    files, files not modified in over 6 months, files shared externally or
+    with 'anyone' links, and files with no clear owner or topic. Recommend
+    an action per finding (archive, delete, restrict sharing) but take no
+    action
+    ```
 
-![](media/media/image11.png){width="6.5in"
-height="3.6666666666666665in"}
+    ![](media/media/dze2t1s1.png)
 
 2.  Review the output:\
-    ![](media/media/image12.png){width="6.25in"
-    height="3.5356572615923008in"}
+    ![](media/media/dze2t1s2.png)
 
 ### Task 2: Review the Audit Report
 
-1.  READ Section 1 --- Duplicate files 🔴 (biggest issue): 3 exact
+1.  READ Section 1 --- Duplicate files 🔴 (biggest issue):
     duplicates identified by byte-identical content hash and 2 versioned
     near-duplicate pairs.\
-    ![](media/media/image13.png){width="6.25in" height="1.78125in"}
+    ![](media/media/dze2t1s3.png)
 
 2.  READ Section 2 --- Stale files ⭕: files identified as archive
     candidates based on filename-embedded dates (metadata dates were
     updated by the Exercise 1 renames).
 
-![](media/media/image14.png){width="6.5in"
-height="1.0520833333333333in"}
+![](media/media/dze2t1s4.png)
 
 3.  READ Section 3 --- External shares ✅: all 28 files show owner-only
     permissions (CLEAN --- no action needed).
 
-![](media/media/image15.png){width="6.5in"
-height="3.2291666666666665in"}
+![](media/media/dze2t1s5.png)
 
 4.  READ Section 4 --- No clear owner 🟡: LegacyPolicy and all 13 empty
     .xlsx placeholder files flagged.
 
-![](media/media/image16.png){width="6.5in"
-height="3.1041666666666665in"}
+![](media/media/dze2t1s6.png)
 
-5.  READ the \'Suggested next steps (on your go-ahead)\' numbered action
-    menu at the bottom.![](media/media/image17.png){width="6.25in"
-    height="1.75in"}
+5.  READ the 'Suggested next steps (on your go-ahead)' numbered action
+    menu at the bottom.![](media/media/image17.png)
 
 ### Task 3: Execute one governance recommendation
 
-1.  In the message box, type: \'2\' (to approve action #2: archive the
+1.  In the message box, type: '2' (to approve action #2: archive the
     2024/2025/legacy items) and click Execute button.
 
-*Note: Cowork executes ONLY action #2. Actions #1, #3, #4, and #5 remain
-pending --- approval of one does not authorize it all.*\
-![](media/media/image18.png){width="6.5in" height="4.458333333333333in"}
+    >Note: Cowork executes ONLY action #2. Actions #1, #3, #4, and #5 remain
+    pending --- approval of one does not authorize it all.*\
+
+    ![](media/media/image18.png)
 
 2.  Cowork puts forth 4 option "How should I resolve the ownerless
     legacy policy?" Select option 1: Move to Archive Candidates.
 
-![](media/media/image19.png){width="6.5in" height="4.46875in"}
+    ![](media/media/image19.png)
 
 3.  An approval prompt pops-up asking for your approval. Select Approve.
 
-![](media/media/image1a.png){width="6.5in" height="4.479166666666667in"}
+    ![](media/media/image1a.png)
 
-*Note: Cowork\'s autonomy boundary: \'Safe without approval\' =
-read-only analysis only. \'Needs human approval\' = any action that
+*Note: Cowork's autonomy boundary: 'Safe without approval' =
+read-only analysis only. 'Needs human approval' = any action that
 changes state.*
 
 ## Exercise 3 -- AI-generated Excel tracking and Teams reporting
@@ -276,32 +290,35 @@ instruction.
 1.  In the Cowork chat box, paste the following prompt and select
     Execute button:
 
-+++*Create an Excel workbook \'File Governance Tracker.xlsx\' in Lab
-Files with one row per file: name, type, topic, last modified, sharing
-status, action taken. Then post a 3-line summary of today\'s cleanup to
-my Teams channel with a link to the* *workbook.+*++
+    ```
+    Create an Excel workbook 'File Governance Tracker.xlsx' in Lab Files with one row per file: name, type, topic, last modified, sharing status, action taken. Then post a 3-line summary of today's cleanup to my Teams channel with a link to the workbook.
+    ```
 
-![](media/media/image1b.png){width="6.5in" height="4.489583333333333in"}
+    ![](media/media/dze2t1s7.png)
 
 2.  An approval prompt opens up asking for approval for the drive.
     Select Approve.
 
-![](media/media/image1c.png){width="6.5in" height="4.479166666666667in"}
+    ![](media/media/image1c.png)
+
+1. Review the Teams channel post prepared by Copilot Cowork, confirm the **File Governance Tracker.xlsx** attachment is included, and then select **Send** to post the audit summary to the specified Teams channel.
+
+    ![](media/media/dze2t1s8.png)
 
 3.  Open the File Governance Tracker.xlsx from the Workspace Output
     panel link. Verify: 28 rows (one per file), 6 columns (File Name,
     Type, Topic, Last Modified, Sharing Status, Action Taken).
 
-![](media/media/image1d.png){width="6.5in" height="4.479166666666667in"}
+    ![](media/media/image1d.png)
 
 4.  Confirm yellow-highlighted rows identify duplicate/flagged files ---
     these carry forward from the Exercise 2 duplicate analysis.
 
-![](media/media/image1e.png){width="6.5in" height="4.479166666666667in"}
+    ![](media/media/image1e.png)
 
-5.  Review the teams message:\
-    ![](media/media/image1f.png){width="6.25in"
-    height="3.4955927384076992in"}
+5.  Review the teams message:
+
+    ![](media/media/image1f.png)
 
 ## Lab summary
 
@@ -330,7 +347,7 @@ Key Cowork capabilities demonstrated throughout:
   automatically without aborting the batch
 
 - Responsible AI Self-Articulation --- Cowork accurately describes its
-  own \'Safe without approval\' vs \'Needs human approval\' boundary
+  own 'Safe without approval' vs 'Needs human approval' boundary
 
 - Cross-App Workflow Orchestration --- OneDrive file data → Excel
   governance tracker → Teams stakeholder communication
